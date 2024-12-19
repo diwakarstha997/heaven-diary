@@ -1,0 +1,83 @@
+:root {
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Hero Section */
+.hero-container {
+    font-family: "League Gothic";
+    color: var(--orange-crayola);
+    text-align: center;
+
+    background-color:rgba(0, 0, 0, 0.795);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.39)),url(assets/images/1451519_505802959526511_165824355_n.jpg) no-repeat center;
+    background-size: cover;
+    padding: 10% 0% 0% 0%;
+
+    box-shadow: 5px 0px 10px 5px rgb(97, 0, 0);
+}
+
+.hero-text {
+    margin: 0% 10% 0% 10%;
+}
+
+.hero-text * {
+    margin: 0;
+    text-shadow: 5px 0px 1px rgb(97, 0, 0);
+}
+
+.hero-text h1 {
+    font-size: 92px;
+    color: darkred;
+} 
+
+.hero-text h3 {
+    font-size: 52px;
+    color: white;
+} 
+
+.nav-bar {
+    background-color: rgba(124, 49, 49, 0.637);
+    color: white;
+    margin-top: 100px;
+}
+
+.nav-bar > ul {
+    font-size: 32px;
+
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    gap: 50px;
+}
+
+.nav-bar > ul li {
+    padding: 20px;
+}
+
+.nav-bar > ul li:hover {
+    font-size: 36px;
+    background-color: darkred;
+    color: rgba(255, 255, 255, 0.877);
+    box-shadow: 0px 0px 10px 5px rgb(97, 0, 0);
+
+    margin: -5px;
+}
+
+.image-card {
+    width: 20%;
+}
