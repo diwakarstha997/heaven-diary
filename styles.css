@@ -1,18 +1,29 @@
 :root {
-}
+    --primary-red:darkred;
+    --secondary-red: rgba(124, 49, 49, 0.637);
+    --shadow-red: rgb(97, 0, 0);
+    --primary-white: white;
+    --secondary-white: rgba(255, 255, 255, 0.877);
+    --gradient-black: linear-gradient(black, rgba(0, 0, 0, 0.603));
+    --default-shadow: 0px 0px 10px 5px rgb(97, 0, 0);
 
-html {
-    box-sizing: border-box;
+
 }
 
 body {
+    background-color: var(--secondary-red);
     margin: 0;
     padding: 0;
+
+    background: var(--gradient-black),url(assets/images/1451519_505802959526511_165824355_n.jpg) no-repeat top;
+    background-size: 100% 600px;
+
 }
 
 .flex-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
 }
 
@@ -21,13 +32,7 @@ body {
     font-family: "League Gothic";
     color: var(--orange-crayola);
     text-align: center;
-
-    background-color:rgba(0, 0, 0, 0.795);
-    background: linear-gradient(black, rgba(0, 0, 0, 0.39)),url(assets/images/1451519_505802959526511_165824355_n.jpg) no-repeat center;
-    background-size: cover;
     padding: 10% 0% 0% 0%;
-
-    box-shadow: 5px 0px 10px 5px rgb(97, 0, 0);
 }
 
 .hero-text {
@@ -41,18 +46,29 @@ body {
 
 .hero-text h1 {
     font-size: 92px;
-    color: darkred;
+    color: var(--primary-red);
 } 
 
 .hero-text h3 {
     font-size: 52px;
-    color: white;
+    color: var(--primary-white);
 } 
 
+/* NavBar Section */
+header {
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0px 6px 10px 5px rgb(97, 0, 0);
+}
+
 .nav-bar {
-    background-color: rgba(124, 49, 49, 0.637);
-    color: white;
+    background-color: var(--secondary-red);
+    color: var(--primary-white);
     margin-top: 100px;
+
+    position: relative;
+    backdrop-filter: blur(5px);
 }
 
 .nav-bar > ul {
@@ -69,15 +85,159 @@ body {
     padding: 20px;
 }
 
+.nav-bar > ul li a {
+    text-decoration: none;
+    color: var(--primary-white);
+}
+
 .nav-bar > ul li:hover {
     font-size: 36px;
-    background-color: darkred;
-    color: rgba(255, 255, 255, 0.877);
-    box-shadow: 0px 0px 10px 5px rgb(97, 0, 0);
+    background-color: var(--primary-red);
+    color: var(--secondary-white);
+    box-shadow: var(--default-shadow);
 
     margin: -5px;
 }
 
-.image-card {
-    width: 20%;
+/* The Journey Section */
+.story-container {
 }
+
+.parallax-view {
+    background: linear-gradient( rgba(0, 0, 0, 0.363), rgba(25, 109, 143, 0.342) ), url(assets/images/967128_505803102859830_1309795148_o.jpg) no-repeat top;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+
+    flex-direction: column;
+}
+
+.parallax-view > * {
+
+    color: var(--primary-white);
+    border: 3px solid var(--primary-white);
+    margin: 0;
+    padding: 10px;
+}
+
+.parallax-view > h1 {
+    font-size: 72px;
+    margin-top: 200px;
+    padding: 10px;
+}
+
+.paragraph-container{
+    background-color: rgba(0, 0, 0, 0.425);
+    /* border-radius: 25%; */
+    font-size: 22px;
+    margin: 100px 20%;
+    padding: 100px;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: black;
+}
+
+.gallery-container {
+    background-color: rgba(99, 95, 95, 0.315);
+    /* background-color: var(--secondary-red); */
+    border-top: 10px solid var(--primary-red);
+    border-bottom: 10px solid var(--primary-red);
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.gallery-heading h1 {
+    background-color: rgba(255, 0, 0, 0.116);
+    color: var(--primary-red);
+    border: 3px solid var(--primary-red);
+    box-shadow: 0px 0px 10px 5px rgba(151, 69, 69, 0.658);
+    text-shadow: 5px 0px 1px rgb(97, 0, 0);
+    font-size: 72px;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.image-card-container {
+    background-color: var(--secondary-red);
+    border: 3px solid var(--primary-red);
+    box-shadow: 0px 0px 10px 5px rgba(151, 69, 69, 0.658);
+    margin: 0 5%;
+    padding: 5%;
+
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.image-card {
+    box-shadow: 0px 0px 10px 5px rgba(189, 178, 178, 0.63);
+    max-width: 300px;
+    margin-bottom: 5%;
+}
+
+/* About Section */
+.about-container {
+    background-color: rgb(116, 87, 87);
+    padding: 10px;
+}
+
+.about-heading h1 {
+    background-color: rgba(173, 127, 29, 0.411);
+    color: var(--primary-red);
+    border: 3px solid var(--primary-red);
+    box-shadow: 0px 0px 10px 5px rgba(151, 69, 69, 0.658);
+    text-shadow: 5px 0px 1px rgb(97, 0, 0);
+    font-size: 72px;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.about-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.about-text {
+    font-size: 24px;
+
+    background-color: rgba(0, 0, 0, 0.219);
+    border: 3px solid var(--primary-red);
+    box-shadow: 0px 0px 10px 5px rgba(151, 69, 69, 0.658);
+    color: white;
+    padding: 30px;
+}
+
+.author-image-box {
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+.author-image-box > img {
+    background-color: rgba(0, 0, 0, 0.219);
+    border: 3px solid var(--primary-red);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px rgba(151, 69, 69, 0.658);
+}
+
+
+
+/* Footer Section */
+footer > p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/*
+Note: 
+Sticky Failure issue: https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46
+
+*/
